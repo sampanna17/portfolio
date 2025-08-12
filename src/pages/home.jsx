@@ -1,101 +1,6 @@
-// import { motion as Motion } from "framer-motion"; 
-// import Sampanna from "../assets/Sampanna.png";
-// import Header from "../components/resuable/header";
-
-// export const Portfolio = () => {
-//   const containerVariants = {
-//     hidden: { opacity: 0 },
-//     visible: {
-//       opacity: 1,
-//       transition: {
-//         staggerChildren: 0.2,
-//         delayChildren: 0.3
-//       }
-//     }
-//   };
-
-//   const itemVariants = {
-//     hidden: { y: 20, opacity: 0 },
-//     visible: {
-//       y: 0,
-//       opacity: 1,
-//       transition: {
-//         duration: 0.6,
-//         ease: [0.16, 1, 0.3, 1]
-//       }
-//     }
-//   };
-
-//   const imageVariants = {
-//     hidden: { scale: 0.9, opacity: 0 },
-//     visible: {
-//       scale: 1,
-//       opacity: 1,
-//       transition: {
-//         duration: 0.8,
-//         ease: [0.16, 1, 0.3, 1]
-//       }
-//     }
-//   };
-
-//   return (
-//     <Motion.div 
-//       initial="hidden"
-//       animate="visible"
-//       className="min-h-screen flex flex-col bg-[#ebebeb] text-black"
-//     >
-//       <Header />
-      
-//       {/* Main Content */}
-//       <main className="flex-grow flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-12">
-//         {/* Image Container */}
-//         <Motion.div 
-//           variants={imageVariants}
-//           className="flex-shrink-0 w-full md:w-1/2 h-[80vh] md:h-[90vh] overflow-hidden"
-//         >
-//           <Motion.img 
-//             src={Sampanna}
-//             alt="Sampanna Piya"
-//             className="w-full h-full object-contain"
-//             whileHover={{ scale: 1.02 }}
-//             transition={{ duration: 0.3 }}
-//           />
-//         </Motion.div>
-
-//         {/* Text Content */}
-//         <Motion.div
-//           variants={containerVariants}
-//           className="w-full md:w-1/2 text-center md:text-left"
-//         >
-//           <Motion.div
-//             variants={itemVariants}
-//             className="mb-4 text-sm md:text-base text-gray-600"
-//           >
-//             Located in Nepal
-//           </Motion.div>
-
-//           <Motion.h1 
-//             variants={itemVariants}
-//             className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4"
-//           >
-//             Software Developer and Engineer
-//           </Motion.h1>
-
-//           <Motion.h2 
-//             variants={itemVariants}
-//             className="text-2xl md:text-3xl lg:text-4xl font-light"
-//           >
-//             Sampanna Piya
-//           </Motion.h2>
-//         </Motion.div>
-//       </main>
-//     </Motion.div>
-//   );
-// };
-
 import { motion as Motion } from "framer-motion";
 import Sampanna from "../assets/Sampanna.png";
-import Header from "../components/resuable/header";
+
 
 export const Portfolio = () => {
   const containerVariants = {
@@ -139,7 +44,6 @@ export const Portfolio = () => {
       animate="visible"
       className="min-h-screen flex flex-col bg-[#ebebeb] text-black"
     >
-      <Header />
       
       {/* Main Content */}
       <main className="flex-grow flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-12 py-8 md:py-0">
@@ -173,7 +77,7 @@ export const Portfolio = () => {
             variants={itemVariants}
             className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-3 md:mb-4"
           >
-            Software Developer and Engineer
+            Software Engineer
           </Motion.h1>
 
           <Motion.h2 
