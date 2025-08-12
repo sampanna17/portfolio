@@ -1,7 +1,6 @@
 import { motion as Motion } from "framer-motion";
 import Sampanna from "../assets/Sampanna.png";
 
-
 export const Portfolio = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,7 +45,7 @@ export const Portfolio = () => {
     >
       
       {/* Main Content */}
-      <main className="flex-grow flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-12 py-8 md:py-0">
+      <main className=" lex-grow flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-12 py-8 md:py-0">
         {/* Image Container - Adjusted for mobile */}
         <Motion.div 
           variants={imageVariants}
