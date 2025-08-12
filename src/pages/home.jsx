@@ -69,7 +69,7 @@ export const Portfolio = () => {
             variants={itemVariants}
             className="mb-3 md:mb-4 text-sm md:text-base text-gray-600"
           >
-            Located in Nepal
+            From Nepal
           </Motion.div>
 
           <Motion.h1 
