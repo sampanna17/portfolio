@@ -1,11 +1,14 @@
-import React from 'react';
+
 import { Portfolio } from './pages/home';
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
-    <div className="App">
-      <Portfolio />
-    </div>
+    <AnimatePresence mode="wait">
+      <div className="App">
+        <Portfolio />
+      </div>
+    </AnimatePresence>
   );
 }
 
