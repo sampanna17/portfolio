@@ -92,7 +92,7 @@ export default function ContactPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 {/* Mobile: Contact Details First */}
                 <Motion.div
-                    className="lg:hidden mb-10 sm:mb-14 mt-4 space-y-6 sm:space-y-8"
+                    className="lg:hidden mb-10 sm:mb-14 mt-6 space-y-6 sm:space-y-8"
                     variants={containerVariants}
                 >
                     <ContactDetailsSection />
@@ -182,7 +182,6 @@ export default function ContactPage() {
                                     className="bg-blue-800 hover:bg-blue-900 text-white px-6 sm:px-8 lg:px-12 py-1.5 sm:py-2 lg:py-3 rounded-full text-sm sm:text-base lg:text-lg font-medium transition-colors duration-200"
                                     whileHover={{
                                         scale: 1.05,
-                                        boxShadow: "0 5px 15px rgba(59, 130, 246, 0.4)"
                                     }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -210,10 +209,10 @@ export default function ContactPage() {
 const ContactDetailsSection = () => (
     <Motion.div variants={containerVariants}>
         <Motion.div variants={itemVariants}>
-            <h3 className="text-gray-400 text-xs sm:text-sm uppercase tracking-wider mb-4 sm:mb-6">
+            <h3 className="text-gray-400 text-xs sm:text-xs uppercase tracking-wider mb-4 sm:mb-6">
                 Contact Details
             </h3>
-            <div className="space-y-2 sm:space-y-4 text-base sm:text-lg">
+            <div className="space-y-2 sm:space-y-4 text-sm sm:text-lg">
                 <p>sampannapiya1@gmail.com</p>
                 <p>+977-9864058536</p>
             </div>
@@ -223,7 +222,7 @@ const ContactDetailsSection = () => (
             <h3 className="text-gray-400 text-xs sm:text-sm uppercase tracking-wider mb-4 sm:mb-6">
                 Business Details
             </h3>
-            <div className="space-y-2 sm:space-y-4 text-base sm:text-lg">
+            <div className="space-y-2 sm:space-y-4 text-sm sm:text-lg">
                 <p>Sampanna Piya</p>
                 <p>Location: Kathmandu, Nepal</p>
             </div>
