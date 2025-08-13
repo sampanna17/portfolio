@@ -167,7 +167,7 @@ export default function Footer() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="absolute mb-6 bottom-8 lg:bottom-6 left-4 lg:left-6 right-4 lg:right-6 px-4 lg:px-40 py-3 lg:py-4"
+                className="absolute mb-0 bottom-8 lg:bottom-6 left-4 lg:left-6 right-4 lg:right-6 px-4 lg:px-40 py-3 lg:py-4"
             >
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-4 lg:gap-6 text-xs lg:text-sm text-gray-400">
                     {/* Right side - Socials first on mobile */}
@@ -179,7 +179,7 @@ export default function Footer() {
                         className="lg:mt-0 order-1 lg:order-2"
                     >
                         <span className="text-gray-500 uppercase tracking-wider text-xs block mb-1 lg:mb-2">Socials</span>
-                        <div className="flex text-lg flex-wrap gap-5 lg:gap-4 lg:text-sm lg:gap3">
+                        <div className="flex text-base flex-wrap gap-5 lg:gap-4 lg:text-sm lg:gap3">
                             {["Instagram", "Twitter", "LinkedIn"].map((social, index) => (
                                 <Motion.a 
                                     key={social}
