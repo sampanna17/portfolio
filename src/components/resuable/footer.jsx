@@ -100,7 +100,7 @@ export default function Footer() {
                         variants={itemVariants}
                         className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-18 lg:mb-16"
                     >
-                        <div className="flex items-center gap-4 lg:gap-6 mb-6 lg:mb-0">
+                        <div className="flex items-center gap-4 lg:gap-6 mb-4 lg:mb-0">
                             <div>
                                 <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-light leading-tight">
                                     Let's work
@@ -114,7 +114,7 @@ export default function Footer() {
                     {/* Horizontal line with connected circle */}
                     <Motion.div 
                         variants={itemVariants}
-                        className="relative mb-32 lg:mb-12"
+                        className="relative mb-28 lg:mb-12"
                     >
                         <Motion.div 
                             variants={lineVariants}
@@ -140,7 +140,7 @@ export default function Footer() {
                     {/* Contact information */}
                     <Motion.div 
                         variants={containerVariants}
-                        className="flex flex-col sm:flex-row gap-3 sm:gap-4 text-white mb-8 lg:mb-16"
+                        className="flex flex-col sm:flex-row gap-3 sm:gap-4 text-white mb-10 lg:mb-16"
                     >
                         <Motion.button 
                             variants={itemVariants}
