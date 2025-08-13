@@ -4,6 +4,7 @@ import Header from "./components/resuable/header";
 import ContactPage from './pages/contact';
 import { Portfolio } from './pages/home';
 import AboutPage from './pages/contact';
+import Footer from "./components/resuable/footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
           </Routes>
         </AnimatePresence>
+        <Footer />
       </div>
     </Router>
   );
