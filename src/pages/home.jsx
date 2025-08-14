@@ -134,7 +134,7 @@ export const Portfolio = () => {
     <Motion.div 
       initial="hidden"
       animate="visible"
-      className="h-1/2 flex flex-col bg-[#ebebeb] text-black"
+      className="min-h-screen flex flex-col bg-[#ebebeb] text-black lg:min-h-1/2"
     >
       {/* Main Content */}
       <main className="flex-grow flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-12 py-8 md:py-0">
