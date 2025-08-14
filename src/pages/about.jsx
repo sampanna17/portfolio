@@ -36,29 +36,33 @@ const AboutPage = () => {
           animate="show"
           variants={containerVariants}
         >
-          {/* Animated heading */}
+
+
           <Motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-16 max-w-4xl flex items-center"
+            className="text-3xl md:text-4xl lg:text-6xl font-light text-gray-900 mb-16 max-w-4xl"
             variants={itemVariants}
           >
-            I can help you with
-            <div className="flex ml-2 h-6 items-center">
-              <AnimatePresence>
-                {[...Array(dots)].map((_, i) => (
-                  <Motion.span
-                    key={i}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3, delay: i * 0.1 }}
-                    className="text-gray-900"
-                  >
-                    .
-                  </Motion.span>
-                ))}
-              </AnimatePresence>
-            </div>
+            <span className="inline-flex items-center whitespace-nowrap">
+              I can help you with
+              <div className="flex ml-2 h-6 items-center">
+                <AnimatePresence>
+                  {[...Array(dots)].map((_, i) => (
+                    <Motion.span
+                      key={i}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3, delay: i * 0.1 }}
+                      className="text-gray-900"
+                    >
+                      .
+                    </Motion.span>
+                  ))}
+                </AnimatePresence>
+              </div>
+            </span>
           </Motion.h1>
+
 
           {/* Services grid with animated cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
