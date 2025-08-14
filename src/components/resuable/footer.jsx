@@ -5,7 +5,7 @@ export default function Footer() {
     const [currentTime, setCurrentTime] = useState("");
     const controls = useAnimation();
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
+    const isInView = useInView(ref, {  once: false, margin: "0px 0px -100px 0px" });
 
     useEffect(() => {
         const updateTime = () => {
@@ -146,7 +146,7 @@ export default function Footer() {
                             variants={itemVariants}
                             whileHover={{ backgroundColor: "#1f2937" }}
                             whileTap={{ scale: 0.98 }}
-                            className="h-16 sm:h-16 px-4 sm:px-6 lg:px-8 rounded-full border border-gray-600 bg-transparent text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis"
+                            className="h-12 lg:h-16 sm:h-14 px-4 sm:px-6 lg:px-8 rounded-full border border-gray-600 bg-transparent text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis"
                         >
                             sampannapiya1@gmail.com
                         </Motion.button>
@@ -154,7 +154,7 @@ export default function Footer() {
                             variants={itemVariants}
                             whileHover={{ backgroundColor: "#1f2937" }}
                             whileTap={{ scale: 0.98 }}
-                            className="h-16 sm:h-16 px-4 sm:px-6 lg:px-8 rounded-full border border-gray-600 bg-transparent text-sm sm:text-base"
+                            className="h-12 lg:h-16 sm:h-14 px-4 sm:px-6 lg:px-8 rounded-full border border-gray-600 bg-transparent text-sm sm:text-base"
                         >
                             +977-9864058536
                         </Motion.button>
@@ -179,7 +179,7 @@ export default function Footer() {
                         className="lg:mt-0 order-1 lg:order-2"
                     >
                         <span className="text-gray-500 uppercase tracking-wider text-xs block mb-1 lg:mb-2">Socials</span>
-                        <div className="flex text-base flex-wrap gap-5 lg:gap-4 lg:text-sm lg:gap3">
+                        <div className="flex text-sm flex-wrap gap-5 lg:gap-4 lg:text-base lg:gap3">
                             {["Instagram", "Twitter", "LinkedIn"].map((social, index) => (
                                 <Motion.a 
                                     key={social}
@@ -200,24 +200,24 @@ export default function Footer() {
                     <div className="flex flex-col sm:flex-row sm:items-end gap-4 lg:gap-12 order-2 lg:order-1">
                         <hr className="block lg:hidden mb-2 border-gray-600 mt-4" />
                         <Motion.div 
-                            initial={{ opacity: 0, y: 10 }}
+                            initial={{ opacity: 0, y: 14 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ delay: 0.1 }}
-                            whileHover={{ scale: 1.02 }}
+                            transition={{ delay: 0.2 }}
+                            whileHover={{ scale: 1.04 }}
                         >
                             <span className="text-gray-500 uppercase tracking-wider">Version</span>
                             <br />
-                            <span className="text-white">2025 © Edition</span>
+                            <span className="text-white lg:text-base">2025 © Edition</span>
                         </Motion.div>
                         <Motion.div 
-                            initial={{ opacity: 0, y: 10 }}
+                            initial={{ opacity: 0, y: 14 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ delay: 0.15 }}
-                            whileHover={{ scale: 1.02 }}
+                            whileHover={{ scale: 1.04 }}
                         >
                             <span className="text-gray-500 uppercase tracking-wider">Localtime</span>
                             <br />
-                            <span className="text-white">{currentTime}</span>
+                            <span className="text-white lg:text-base">{currentTime}</span>
                         </Motion.div>
                     </div>
                 </div>
@@ -225,3 +225,4 @@ export default function Footer() {
         </div>
     );
 }
+
