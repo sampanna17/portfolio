@@ -11,7 +11,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex justify-between items-center p-6 md:p-8 lg:p-12 bg-[#ebebeb]">
+    <header className="flex justify-between items-center p-6 md:p-8 lg:p-10 lg:px-18 bg-[#ebebeb]">
       <Motion.div 
         className="text-xs md:text-sm text-gray-500"
         initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ const Header = () => {
         © Code by Sampanna
       </Motion.div>
       
-      <nav className="flex space-x-4 md:space-x-6 text-sm md:text-base">
+      <nav className="flex space-x-4 md:space-x-6 text-xs lg:text-base md:text-base">
         {navItems.map((item) => (
           <Motion.a
             key={item.name}
