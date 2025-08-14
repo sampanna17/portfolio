@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import Header from "./components/resuable/header";
 import ContactPage from './pages/contact';
 import { Portfolio } from './pages/home';
-import AboutPage from './pages/contact';
+import AboutPage from './pages/about';
 import Footer from "./components/resuable/footer";
 
 function App() {

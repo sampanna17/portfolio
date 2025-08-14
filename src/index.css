@@ -8,12 +8,16 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
+/* Hide scrollbars globally but allow scrolling */
+html, body {
+  overflow: auto;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE and Edge */
 }
 
-body {
-  overscroll-behavior: none;
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, Opera */
 }
 
 /* Reset autofill styles completely */
@@ -30,7 +34,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus,
 select:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-  -webkit-text-fill-color: currentColor !important; /* Uses element's current text color */
-  caret-color: currentColor !important; /* Maintains cursor color */
-  transition: all 9999s ease-in-out 0s !important; /* Prevents any background flash */
+  -webkit-text-fill-color: currentColor !important; 
+  caret-color: currentColor !important; 
+  transition: all 9999s ease-in-out 0s !important; 
 }
