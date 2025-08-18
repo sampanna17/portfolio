@@ -1,5 +1,8 @@
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import BalkumariLogo from '../../assets/school.png';
+import ValmikiLogo from '../../assets/+2.png';
+import IslingtonLogo from '../../assets/ing.png';
 
 const EducationSection = ({ containerVariants, itemVariants }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -9,25 +12,25 @@ const EducationSection = ({ containerVariants, itemVariants }) => {
       id: 0,
       institution: "Balkumari English School",
       degree: "School Leaving Certificate (SLC)",
-      period: "2008 - 2018",
+      period: "2008 - 2020",
       description: "Completed my basic education with focus on science and technology fundamentals.",
-      icon: "🏫"
+      logo: BalkumariLogo
     },
     {
       id: 1,
       institution: "Valmiki Shiksha Sadan",
       degree: "+2 in Science",
-      period: "2018 - 2020",
+      period: "2020 - 2022",
       description: "Higher secondary education with majors in Physics, Chemistry, and Mathematics.",
-      icon: "🔬"
+      logo: ValmikiLogo
     },
     {
       id: 2,
       institution: "Islington College",
       degree: "Bachelor in Information Technology (BIT)",
-      period: "2020 - 2024",
+      period: "2022 - 2025",
       description: "Specialized in software development, web technologies, and system architecture.",
-      icon: "💻"
+      logo: IslingtonLogo
     }
   ];
 
@@ -37,9 +40,19 @@ const EducationSection = ({ containerVariants, itemVariants }) => {
     exit: { opacity: 0, x: 20 }
   };
 
+  const logoVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    show: { 
+      scale: 1, 
+      opacity: 1,
+      transition: { type: 'spring', stiffness: 300, damping: 10 }
+    },
+    hover: { scale: 1.1 }
+  };
+
   return (
     <Motion.section 
-      className="min-h-[60vh] flex items-center justify-center px-6 py-16 bg-gray-50  "
+      className="min-h-[60vh] flex items-center justify-center px-6 py-16 bg-gray-50"
       initial="hidden"
       animate="show"
       variants={containerVariants}
@@ -73,12 +86,17 @@ const EducationSection = ({ containerVariants, itemVariants }) => {
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="flex items-center">
-                  <Motion.span 
-                    className="text-2xl mr-4"
-                    whileHover={{ rotate: 10 }}
+                  <Motion.div
+                    className="w-12 h-12 mr-4 flex items-center justify-center"
+                    variants={logoVariants}
+                    whileHover="hover"
                   >
-                    {item.icon}
-                  </Motion.span>
+                    <img 
+                      src={item.logo} 
+                      alt={`${item.institution} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  </Motion.div>
                   <div>
                     <h3 className="text-sm lg:text-lg font-medium text-gray-900">{item.institution}</h3>
                     <p className="text-sm lg:text-lg text-gray-600">{item.period}</p>
@@ -94,7 +112,7 @@ const EducationSection = ({ containerVariants, itemVariants }) => {
           {educationData.map((item) => (
             <Motion.button
               key={item.id}
-              className={`px-8 py-4 border-b-2 transition-colors ${activeTab === item.id ? 'border-gray-900 text-gray-900   '  : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+              className={`px-8 py-4 border-b-2 transition-colors ${activeTab === item.id ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
               onClick={() => setActiveTab(item.id)}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
@@ -118,12 +136,17 @@ const EducationSection = ({ containerVariants, itemVariants }) => {
             <div className="flex flex-col md:flex-row md:items-start">
               <div className="md:w-1/3 mb-6 md:mb-0">
                 <Motion.div 
-                  className="text-6xl mb-4"
-                  initial={{ scale: 0.8, rotate: -10 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ type: 'spring', stiffness: 300, delay: 0.2 }}
+                  className="w-24 h-24 lg:w-32 lg:h-32 mb-4"
+                  initial="hidden"
+                  animate="show"
+                  variants={logoVariants}
+                  whileHover="hover"
                 >
-                  {educationData[activeTab].icon}
+                  <img 
+                    src={educationData[activeTab].logo} 
+                    alt={`${educationData[activeTab].institution} logo`}
+                    className="w-full h-full object-contain"
+                  />
                 </Motion.div>
                 <h3 className="text-xl lg:text-2xl font-medium text-gray-900 mb-2">
                   {educationData[activeTab].institution}
