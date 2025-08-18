@@ -1,5 +1,6 @@
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import EducationSection from '../components/about/education';
 
 // Animation variants
 const containerVariants = {
@@ -28,16 +29,19 @@ const AboutPage = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      <section className="min-h-[50vh] flex items-center justify-center px-6 py-16">
-        <Motion.div
-          className="max-w-6xl w-full"
-          initial="hidden"
-          animate="show"
-          variants={containerVariants}
-        >
-
-
+    <Motion.main 
+      className="min-h-screen bg-gray-50"
+      initial="hidden"
+      animate="show"
+      variants={containerVariants}
+    >
+      <EducationSection />
+      
+      <Motion.section 
+        className="min-h-[50vh] flex items-center justify-center px-6 py-16"
+        variants={containerVariants}
+      >
+        <div className="max-w-6xl w-full mb-4 lg:mb-16">
           <Motion.h1
             className="text-3xl md:text-4xl lg:text-6xl font-light text-gray-900 mb-16 max-w-4xl"
             variants={itemVariants}
@@ -62,7 +66,6 @@ const AboutPage = () => {
               </div>
             </span>
           </Motion.h1>
-
 
           {/* Services grid with animated cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
@@ -111,9 +114,9 @@ const AboutPage = () => {
               </p>
             </Motion.div>
           </div>
-        </Motion.div>
-      </section>
-    </main>
+        </div>
+      </Motion.section>
+    </Motion.main>
   );
 };
 
