@@ -49,7 +49,7 @@ const EducationSection = ({ containerVariants, itemVariants }) => {
         variants={containerVariants}
       >
         <Motion.div className="mb-10 lg:mb-16" variants={itemVariants}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-gray-900">
             My Education Journey
           </h2>
           <Motion.div 
