@@ -1,6 +1,7 @@
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import EducationSection from '../components/about/education';
+import WorkExperience from '../components/about/experience';
 
 // Animation variants
 const containerVariants = {
@@ -36,6 +37,8 @@ const AboutPage = () => {
       variants={containerVariants}
     >
       <EducationSection />
+
+      <WorkExperience />
       
       <Motion.section 
         className="min-h-[50vh] flex items-center justify-center px-6 py-16"
