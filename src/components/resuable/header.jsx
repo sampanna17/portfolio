@@ -5,7 +5,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const navItems = [
-    { name: "Work", path: "/" },
+    { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
