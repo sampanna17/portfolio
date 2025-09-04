@@ -42,7 +42,7 @@ export default function Footer() {
         visible: {
             y: 0,
             opacity: 1,
-            transition: { duration: 0.8, ease: "easeInOut" }
+            transition: { duration: 0.6, ease: "easeInOut" }
         }
     };
 
@@ -52,7 +52,7 @@ export default function Footer() {
     };
 
     const circleVariants = {
-        hidden: { opacity: 0, scale: 0.6 },
+        hidden: { opacity: 0, scale: 0.4 },
         visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 80, damping: 12, delay: 0.4 } }
     };
 
