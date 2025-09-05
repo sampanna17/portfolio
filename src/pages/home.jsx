@@ -76,9 +76,9 @@ export const Portfolio = () => {
 
           <Motion.h1 
             variants={itemVariants}
-            className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-3 md:mb-4"
+            className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4"
           >
-            Software Engineer
+            Associate Software Engineer
           </Motion.h1>
 
           <Motion.h2 
