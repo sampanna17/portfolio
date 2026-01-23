@@ -1,5 +1,4 @@
 import { motion as Motion } from "framer-motion";
-import Sampanna from "../assets/Sampanna.png";
 
 export const Portfolio = () => {
   const containerVariants = {
@@ -41,7 +40,7 @@ export const Portfolio = () => {
     <Motion.div 
       initial="hidden"
       animate="visible"
-      className="min-h-screen flex flex-col bg-[#ebebeb] text-black lg:min-h-1/2"
+      className="min-h-[calc(100vh-55px)] lg:min-h-[calc(100vh-105px)] flex flex-col bg-[#ebebeb] text-black"
     >
       {/* Main Content */}
       <main className="flex-grow flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-12 py-8 md:py-0">
@@ -49,7 +48,7 @@ export const Portfolio = () => {
         {/* Image Container */}
         <Motion.div 
           variants={imageVariants}
-          className="flex-shrink-0 w-full md:w-1/2 h-[50vh] md:h-[90vh] overflow-hidden"
+          className="flex-shrink-0 w-full md:w-1/2 h-[50vh] md:h-[86vh] overflow-hidden"
         >
           <Motion.img 
             src="https://res.cloudinary.com/dszzmdq4a/image/upload/v1769158063/Sampanna.png"
