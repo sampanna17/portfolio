@@ -229,7 +229,7 @@ const WorkExperience = () => {
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{ delay: idx * 0.1 }}
                                             >
-                                                <span className="text-blue-500 mr-2 mt-1">•</span>
+                                                <span className="text-gray-700 mr-2 mt-1">•</span>
                                                 <span className="text-gray-600">{achievement}</span>
                                             </Motion.li>
                                         ))}
@@ -276,12 +276,12 @@ const WorkExperience = () => {
 
                 {/* GitHub section */}
                 <Motion.div
-                    className="mt-12 p-6 bg-gray-900 text-white rounded-xl"
+                    className="mt-12 p-6 bg-gray-800 text-white rounded-xl"
                     variants={itemVariants}
                 >
                     <div className="flex flex-col md:flex-row items-center gap-6">
                         <div className="flex-shrink-0">
-                            <div className="w-20 h-20 bg-gray-800 rounded-lg flex items-center justify-center">
+                            <div className="w-20 h-20 rounded-lg flex items-center justify-center">
                                 <FaGithub className="w-full h-full text-white p-4"  />
                             </div>
                         </div>

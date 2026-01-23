@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
@@ -87,7 +85,7 @@ export default function ContactPage() {
         <Motion.div
             initial="hidden"
             animate="visible"
-            className="min-h-screen bg-gray-900 text-white"
+            className="min-h-screen bg-gray-900 text-white -mb-8 md:-mb-10"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 {/* Mobile: Contact Details First */}
