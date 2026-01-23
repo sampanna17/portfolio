@@ -52,7 +52,7 @@ export const Portfolio = () => {
           className="flex-shrink-0 w-full md:w-1/2 h-[50vh] md:h-[90vh] overflow-hidden"
         >
           <Motion.img 
-            src={Sampanna}
+            src="https://res.cloudinary.com/dszzmdq4a/image/upload/v1769158063/Sampanna.png"
             alt="Sampanna Piya"
             loading="lazy"
             decoding="async"
