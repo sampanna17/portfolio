@@ -1,4 +1,5 @@
 import { motion as Motion } from "framer-motion";
+import IntroSection from "../components/home/IntroSection";
 
 export const Portfolio = () => {
   const containerVariants = {
@@ -40,10 +41,10 @@ export const Portfolio = () => {
     <Motion.div 
       initial="hidden"
       animate="visible"
-      className="min-h-[calc(100vh-55px)] lg:min-h-[calc(100vh-105px)] flex flex-col bg-[#ebebeb] text-black"
+      className="min-h-screen flex flex-col bg-[#ebebeb] text-black"
     >
-      {/* Main Content */}
-      <main className="flex-grow flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-12 py-8 md:py-0">
+      {/* Hero Section */}
+      <main className="min-h-[calc(100vh-55px)] lg:min-h-[calc(100vh-105px)] flex flex-grow flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-4 md:px-12 py-8 md:py-0">
         
         {/* Image Container */}
         <Motion.div 
@@ -88,6 +89,9 @@ export const Portfolio = () => {
           </Motion.h2>
         </Motion.div>
       </main>
+
+      {/* Intro Section */}
+      <IntroSection />
     </Motion.div>
   );
 };
