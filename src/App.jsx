@@ -1,26 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Header from "./components/resuable/header";
-import ContactPage from './pages/contact';
-import { Portfolio } from './pages/home';
-import AboutPage from './pages/about';
+import ContactPage from "./pages/contact";
+import { Portfolio } from "./pages/home";
+import AboutPage from "./pages/about";
 import Footer from "./components/resuable/footer";
+import Learning from "./pages/deploy";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Portfolio />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-      </div>
-    </Router>
+    <Learning />
+    // <Router>
+    //   <div className="App">
+    //     <Header />
+    //     <AnimatePresence mode="wait">
+    //       <Routes>
+    //         <Route path="/" element={<Portfolio />} />
+    //         <Route path="/contact" element={<ContactPage />} />
+    //         <Route path="/about" element={<AboutPage />} />
+    //       </Routes>
+    //     </AnimatePresence>
+    //     <Footer />
+    //   </div>
+    // </Router>
   );
 }
 
