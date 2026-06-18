@@ -25,7 +25,7 @@ const IntroSection = () => {
             }}
             className="text-xl md:text-2xl lg:text-3xl leading-[1.2] tracking-tight font-normal"
           >
-            {"Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge."
+            {"Helping brands to stand out in the digital era. Together we will set the new status. No nonsense, always on the cutting edge."
               .split(" ")
               .map((word, i) => (
                 <span
